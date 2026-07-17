@@ -61,7 +61,7 @@ export const HeroSection: React.FC = () => {
           }}
           className="mt-6 font-cormorant text-xl sm:text-2xl md:text-3xl text-gold-light italic tracking-wide font-light drop-shadow-sm"
         >
-          are getting married
+          
         </motion.p>
       </div>
 
