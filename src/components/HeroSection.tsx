@@ -31,7 +31,9 @@ export const HeroSection: React.FC = () => {
           transition={{ duration: 1.5, ease: 'easeOut', delay: 0.3 }}
           className="mb-6"
         >
-          <span className="font-cinzel text-xs tracking-[0.4em] text-gold-light opacity-90">THE KATB KETAB OF</span>
+          <span className="font-cinzel text-xs tracking-[0.4em] text-gold-light opacity-90">
+            YOU'RE INVITED TO THE KATB KETAB OF
+          </span>
         </motion.div>
 
         {/* Groom & Bride Names */}
@@ -61,7 +63,7 @@ export const HeroSection: React.FC = () => {
           }}
           className="mt-6 font-cormorant text-xl sm:text-2xl md:text-3xl text-gold-light italic tracking-wide font-light drop-shadow-sm"
         >
-          
+          {/* Tagline area */}
         </motion.p>
       </div>
 
