@@ -65,7 +65,7 @@ export const FooterSection: React.FC = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="font-sans text-[8px] text-stone-400 mt-4 tracking-widest block"
         >
-          &copy; {new Date().getFullYear()} Ahmed &amp; Shrouq. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Ahmed &amp; Shrouk. All Rights Reserved.
         </motion.span>
       </div>
     </footer>
