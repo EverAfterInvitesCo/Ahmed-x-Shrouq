@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Instagram, Facebook, TikTok } from 'lucide-react';
+import { Instagram, Facebook } from 'lucide-react';
 import { GoldDivider } from './GoldOrnaments';
 
 export const FooterSection: React.FC = () => {
@@ -48,7 +48,9 @@ export const FooterSection: React.FC = () => {
             <Facebook className="w-5 h-5" />
           </a>
           <a href="https://www.tiktok.com/@_everafterinvites_" target="_blank" rel="noopener noreferrer" className="text-gold-dark hover:text-stone-900 transition-colors">
-            <TikTok className="w-5 h-5" />
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.9V2.5h-3.45v13.67a2.89 2.89 0 0 1-5.77 0 2.89 2.89 0 0 1 2.89-2.89h.5V10h-.5a6.39 6.39 0 0 0-6.39 6.39 6.39 6.39 0 0 0 6.39 6.39h.56A6.39 6.39 0 0 0 21 16.39V6.69z"/>
+            </svg>
           </a>
         </motion.div>
 
