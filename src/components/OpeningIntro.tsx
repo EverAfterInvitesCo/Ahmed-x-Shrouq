@@ -111,7 +111,7 @@ export const OpeningIntro: React.FC<OpeningIntroProps> = ({ onComplete }) => {
 
             <div className="space-y-2">
               <p className="font-cinzel text-xs tracking-[0.4em] text-gold-light opacity-95 uppercase">
-                Ahmed &amp; Shrouq
+                Ahmed &amp; Shrouk
               </p>
               <p className="font-cormorant text-xl md:text-2xl text-white italic tracking-wider font-light">
                 You are cordially invited
