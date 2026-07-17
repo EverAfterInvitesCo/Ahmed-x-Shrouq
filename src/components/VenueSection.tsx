@@ -4,11 +4,11 @@ import { MapPin, Clock } from 'lucide-react';
 import { GoldDivider, GoldCrest } from './GoldOrnaments';
 
 export const VenueSection: React.FC = () => {
-  // Updated Link for Kafr El Gazar, Banha
-  const GOOGLE_MAPS_LINK = 'https://maps.app.goo.gl/VgHBx5FWuR1Kievj9';
+  // Updated Link for CASTEL
+  const GOOGLE_MAPS_LINK = 'https://maps.app.goo.gl/paVpK5CyWyz6BnPs5';
   
-  // Updated Embedded Map source for the new location
-  const MAP_EMBED_SRC = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.9082260273576!2d31.185203375836484!3d30.565365593854176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7c1c28c89c89f%3A0x6b403487f54c9b13!2sAl-Rahman%20Al-Raheem%20Mosque%2C%20Kafr%20El-Gazzar%2C%20Banha!5e0!3m2!1sen!2seg!4v1710000000000!5m2!1sen!2seg';
+  // Updated Embedded Map source
+  const MAP_EMBED_SRC = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.9082260273576!2d31.1723125!3d30.4813125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7c1c28c89c89f%3A0x6b403487f54c9b13!2sCASTEL%20%D9%82%D8%A7%D8%B9%D8%A9%20%D9%83%D8%A7%D8%B3%D9%84!5e0!3m2!1sen!2seg!4v1710000000000!5m2!1sen!2seg';
 
   return (
     <section
@@ -33,7 +33,7 @@ export const VenueSection: React.FC = () => {
           </h2>
           <GoldDivider />
           <h3 id="venue-subheading" className="font-cinzel text-lg md:text-xl text-gold-dark font-medium tracking-widest mt-2">
-            Al Rahman Al Raheem Venue
+            CASTEL Venue
           </h3>
           <p id="venue-tagline" className="mt-3 font-cormorant text-xl text-stone-500 italic">
             &ldquo;Where our forever begins.&rdquo;
@@ -51,12 +51,6 @@ export const VenueSection: React.FC = () => {
             className="lg:col-span-7 flex flex-col h-full"
           >
             <div id="map-container" className="relative flex-1 min-h-[350px] md:min-h-[450px] rounded-2xl overflow-hidden border border-gold-light/45 bg-white/50 backdrop-blur-md p-2 shadow-[0_15px_40px_rgba(197,168,128,0.08)] group animate-glow">
-              {/* Gold corners */}
-              <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-gold/50"></div>
-              <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-gold/50"></div>
-              <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-gold/50"></div>
-              <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-gold/50"></div>
-
               <iframe
                 src={MAP_EMBED_SRC}
                 className="w-full h-full rounded-xl"
@@ -64,7 +58,7 @@ export const VenueSection: React.FC = () => {
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Al Rahman Al Raheem Venue Location"
+                title="CASTEL Venue Location"
               ></iframe>
             </div>
 
@@ -92,22 +86,13 @@ export const VenueSection: React.FC = () => {
             className="lg:col-span-5 flex flex-col"
           >
             <div id="venue-details-card" className="h-auto rounded-2xl bg-white/65 backdrop-blur-md border border-gold-light/45 shadow-[0_15px_45px_rgba(197,168,128,0.06)] p-8 md:p-8 animate-glow relative overflow-hidden group">
-              {/* Corner Accents */}
-              <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-gold/40"></div>
-              <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-gold/40"></div>
-              <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-gold/40"></div>
-              <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-gold/40"></div>
-
               <div className="space-y-6">
-                {/* Header within card */}
                 <div className="border-b border-gold-light/20 pb-4">
                   <span className="font-cinzel text-xs tracking-widest text-gold-dark font-medium block mb-1">LOCATION DETAILS</span>
                   <p className="font-playfair text-xl text-stone-900">Wedding Invitation</p>
                 </div>
 
-                {/* Details Items */}
                 <div className="space-y-6">
-                  {/* Item 1: Venue name */}
                   <div className="flex items-start space-x-4">
                     <div className="p-2.5 rounded-full bg-champagne/40 border border-gold-light/30 text-gold-dark mt-1 flex-shrink-0">
                       <MapPin className="w-4 h-4" />
@@ -115,13 +100,12 @@ export const VenueSection: React.FC = () => {
                     <div>
                       <h4 className="font-cinzel text-xs tracking-wider text-stone-900 font-medium uppercase">Venue</h4>
                       <p className="mt-1 font-cormorant text-md md:text-lg text-stone-700 leading-relaxed">
-                        Al Rahman Al Raheem Venue<br />
-                        <span className="text-xs text-stone-500 font-sans block mt-0.5">Kafr El Gazar, Banha, Egypt</span>
+                        CASTEL قاعة كاسل<br />
+                        <span className="text-xs text-stone-500 font-sans block mt-0.5">Kafr El-Gazzar, Banha, Egypt</span>
                       </p>
                     </div>
                   </div>
 
-                  {/* Item 2: Ceremony Time */}
                   <div className="flex items-start space-x-4">
                     <div className="p-2.5 rounded-full bg-champagne/40 border border-gold-light/30 text-gold-dark mt-1 flex-shrink-0">
                       <Clock className="w-4 h-4" />
