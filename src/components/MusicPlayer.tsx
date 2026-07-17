@@ -1,4 +1,4 @@
-import React, { useState, useRef, useImperativeHandle, forwardRef } from 'react';
+import React, { useState, useRef, useImperativeHandle, forwardRef, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 
 export const MusicPlayer = forwardRef((_, ref) => {
@@ -9,11 +9,26 @@ export const MusicPlayer = forwardRef((_, ref) => {
     playMusic: () => {
       if (audioRef.current) {
         audioRef.current.muted = false;
-        audioRef.current.play().catch(e => console.log("Playback failed", e));
+        audioRef.current.play().catch(e => console.log("Playback failed:", e));
         setIsMuted(false);
       }
     }
   }));
+
+  // Force play on first document click if auto-play fails
+  useEffect(() => {
+    const handleFirstInteraction = () => {
+      if (audioRef.current && audioRef.current.paused) {
+        audioRef.current.muted = false;
+        audioRef.current.play().catch(e => console.log("Interaction play failed:", e));
+        setIsMuted(false);
+        document.removeEventListener('click', handleFirstInteraction);
+      }
+    };
+
+    document.addEventListener('click', handleFirstInteraction);
+    return () => document.removeEventListener('click', handleFirstInteraction);
+  }, []);
 
   const toggleMute = () => {
     if (audioRef.current) {
