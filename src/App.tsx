@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { OpeningIntro } from './components/OpeningIntro';
 import { HeroSection } from './components/HeroSection';
@@ -15,6 +15,15 @@ import { MusicPlayer } from './components/MusicPlayer';
 
 export default function App() {
   const [introFinished, setIntroFinished] = useState(false);
+  const musicRef = useRef<any>(null); // Reference to control the music
+
+  const handleIntroComplete = () => {
+    setIntroFinished(true);
+    // Trigger the music to play once the intro animation finishes
+    if (musicRef.current) {
+      musicRef.current.playMusic();
+    }
+  };
 
   return (
     <div className="relative min-h-screen bg-ivory text-stone-800 selection:bg-gold-light selection:text-gold-dark">
@@ -24,8 +33,8 @@ export default function App() {
         beautifully once the envelope opening animation concludes.
       */}
       
-      {/* Music Player added to the top level */}
-      <MusicPlayer />
+      {/* Music Player with reference to trigger playback */}
+      <MusicPlayer ref={musicRef} />
 
       <div 
         className={`w-full transition-opacity duration-[1200ms] ease-out ${
@@ -42,7 +51,7 @@ export default function App() {
       {/* Absolute-positioned fullscreen video intro with exit fade */}
       <AnimatePresence>
         {!introFinished && (
-          <OpeningIntro onComplete={() => setIntroFinished(true)} />
+          <OpeningIntro onComplete={handleIntroComplete} />
         )}
       </AnimatePresence>
     </div>
