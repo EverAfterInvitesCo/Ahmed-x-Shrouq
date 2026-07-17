@@ -31,7 +31,7 @@ export const HeroSection: React.FC = () => {
           transition={{ duration: 1.5, ease: 'easeOut', delay: 0.3 }}
           className="mb-6"
         >
-          <span className="font-cinzel text-xs tracking-[0.4em] text-gold-light opacity-90">THE WEDDING OF</span>
+          <span className="font-cinzel text-xs tracking-[0.4em] text-gold-light opacity-90">THE KATB KETAB OF</span>
         </motion.div>
 
         {/* Groom & Bride Names */}
