@@ -15,7 +15,7 @@ export const MusicPlayer = forwardRef((_, ref) => {
     }
   }));
 
-  // Force play on first document click if auto-play fails
+  // Force play on first document click if auto-play is blocked by browser
   useEffect(() => {
     const handleFirstInteraction = () => {
       if (audioRef.current && audioRef.current.paused) {
@@ -39,8 +39,12 @@ export const MusicPlayer = forwardRef((_, ref) => {
 
   return (
     <div className="fixed top-6 right-6 z-[100]">
+      {/* 
+        Updated path to include the repository base path 
+        to fix the 404 error on GitHub Pages.
+      */}
       <audio ref={audioRef} loop>
-        <source src="/Royal.mp3" type="audio/mpeg" />
+        <source src="/Ahmed-x-Shrouk/Royal.mp3" type="audio/mpeg" />
       </audio>
       
       <button 
