@@ -11,6 +11,7 @@ import { QuranSection } from './components/QuranSection';
 import { CountdownSection } from './components/CountdownSection';
 import { VenueSection } from './components/VenueSection';
 import { FooterSection } from './components/FooterSection';
+import { MusicPlayer } from './components/MusicPlayer';
 
 export default function App() {
   const [introFinished, setIntroFinished] = useState(false);
@@ -22,6 +23,10 @@ export default function App() {
         Pre-mounted underneath with low opacity, unlocking overflow and fading in 
         beautifully once the envelope opening animation concludes.
       */}
+      
+      {/* Music Player added to the top level */}
+      <MusicPlayer />
+
       <div 
         className={`w-full transition-opacity duration-[1200ms] ease-out ${
           introFinished ? 'opacity-100' : 'opacity-0 h-screen overflow-hidden'
@@ -43,4 +48,3 @@ export default function App() {
     </div>
   );
 }
-
